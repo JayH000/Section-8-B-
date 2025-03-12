@@ -17,7 +17,7 @@ def trapezoidal_rule(f, a, b, N):
     return (b - a) / (2 * N) * (y[0] + 2*np.sum(y[1:-1]) + y[-1])
 
 def simpsons_rule(f, a, b, N):
-    """Simpson’s rule for numerical integration (N must be even)."""
+    """Simpsons rule for numerical integration (N must be even)."""
     if N % 2 == 1:  
         N += 1  # Ensure even number of intervals
     x = np.linspace(a, b, N+1)
